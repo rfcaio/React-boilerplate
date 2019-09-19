@@ -34,7 +34,8 @@
     "url": "https://github.com/rfcaio/react-boilerplate.git"
   },
   "scripts": {
-    "start": "webpack-dev-server --config webpack.dev.js"
+    "build": "webpack --env production",
+    "start": "webpack-dev-server --env development"
   },
   "version": "1.0.0"
 }
