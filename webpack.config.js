@@ -4,6 +4,8 @@ const path = require('path')
 
 require('dotenv/config')
 
+const parts = require('./webpack.parts')
+
 const commonConfig = merge([
   {
     module: {
@@ -21,14 +23,7 @@ const commonConfig = merge([
 ])
 
 const developmentConfig = merge([
-  {
-    devServer: {
-      contentBase: './dist',
-      historyApiFallback: true,
-      inline: true,
-      port: process.env.PORT || 8001
-    }
-  }
+  parts.devServer({ port: process.env.PORT || 8001 })
 ])
 
 const productionConfig = merge([])
