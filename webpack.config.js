@@ -10,7 +10,6 @@ const commonConfig = merge([
   {
     module: {
       rules: [
-        { test: /\.css$/, use: ['style-loader', 'css-loader'] },
         { exclude: /node_modules/, test: /\.js$/, use: ['babel-loader'] }
       ]
     },
@@ -19,7 +18,8 @@ const commonConfig = merge([
         template: 'src/index.html'
       })
     ]
-  }
+  },
+  parts.loadCSS()
 ])
 
 const developmentConfig = merge([
