@@ -1,3 +1,3 @@
 # About
 
-A basic boilerplate for React projects.
+> A basic boilerplate for React projects.
